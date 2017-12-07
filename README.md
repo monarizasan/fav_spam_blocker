@@ -27,9 +27,9 @@ fav_spam_blocker_for_twitter
                              --token TOKEN 
                              --token-secret TOKEN_SECRET
                              --user-name monarisa 
-                             --num-digits 3`
+                             --num-digits 2`
 
-を実行すると、@monarisa000 ~ @monarisa099 のツイッターアカウントを全てブロックします。num_digitsが数字の桁数を指します。--num-digits 4 であれば @monarisa0000 ~ @monarisa0999 のツイッターアカウントを全てブロックします。
+を実行すると、@monarisa00 ~ @monarisa99 のツイッターアカウントを全てブロックします。num_digitsが数字の桁数を指します。--num-digits 3 であれば @monarisa000 ~ @monarisa999 のツイッターアカウントを全てブロックします。
 
 ブロック解除するときは --unlock オプションをつけて
 
