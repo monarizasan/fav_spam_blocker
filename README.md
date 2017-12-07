@@ -29,7 +29,7 @@ fav_spam_blocker_for_twitter
                              --user-name monarisa 
                              --num-digits 3`
 
-を実行すると、@monarisa000 ~ @monarisa099 のツイッターアカウントを全てブロックします。
+を実行すると、@monarisa000 ~ @monarisa099 のツイッターアカウントを全てブロックします。num_digitsが数字の桁数を指します。--num-digits 4 であれば @monarisa0000 ~ @monarisa0999 のツイッターアカウントを全てブロックします。
 
 ブロック解除するときは --unlock オプションをつけて
 
@@ -41,6 +41,6 @@ fav_spam_blocker_for_twitter
                              --num-digits 3
                              --unlock`
 
-のように実行します。
+を実行します。
 
 
