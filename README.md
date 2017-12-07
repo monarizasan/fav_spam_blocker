@@ -4,9 +4,9 @@ fav_spam_blocker_for_twitter
 `usage: fav_spam_blocker.py [-h] --consumer-key CONSUMER_KEY --consumer-secret
                            CONSUMER_SECRET --token TOKEN --token-secret TOKEN_SECRET
                            --user-name USER_NAME [--num-digits NUM_DIGITS]
-                          [--unlock]
+                          [--unlock]`
 
-optional arguments:
+`optional arguments:
   -h, --help            show this help message and exit
   --consumer-key CONSUMER_KEY
   --consumer-secret CONSUMER_SECRET
@@ -16,7 +16,9 @@ optional arguments:
   --num-digits NUM_DIGITS
   --unlock`
   
-文字＋連番のツイッターアカウントをブロックします。
+文字＋連番のツイッターアカウントをブロックします。スクリプト内でtweepyを使用していますので、インストールが必要です。
+
+`pip3 install tweepy`
 
 例えば
 
