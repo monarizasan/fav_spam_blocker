@@ -1,6 +1,8 @@
 # fav_spam_blocker
 fav_spam_blocker_for_twitter
 
+Mac-OSXで動作確認済。python3スクリプトです。
+
 使用にはCONSUMER_KEY、CONSUMER_SECRET、TOKEN、TOKEN_SECRETの取得が必要です。
 
 https://apps.twitter.com/
