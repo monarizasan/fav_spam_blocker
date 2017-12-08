@@ -22,9 +22,9 @@ def spam_block(consumer_key, consumer_secret, token, token_secret, user_name, nu
                          
     api = tweepy.API(auth)
     
-    for i in range(10**num_digits)):
+    for i in range(10**int(num_digits)):
     
-        target_screen_name = user_name + str(i).zfill(num_digits)
+        target_screen_name = user_name + str(i).zfill(int(num_digits))
     
         try:
             user = api.get_user(screen_name=target_screen_name)
@@ -44,9 +44,9 @@ def unlock(consumer_key, consumer_secret, token, token_secret, user_name, num_di
                          
     api = tweepy.API(auth)
     
-    for i in range(10**num_digits):
+    for i in range(10**int(num_digits)):
     
-        target_screen_name = user_name + str(i).zfill(num_digits)
+        target_screen_name = user_name + str(i).zfill(int(num_digits))
     
         try:
             user = api.get_user(screen_name=target_screen_name)
