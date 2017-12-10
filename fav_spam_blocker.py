@@ -50,7 +50,7 @@ def unlock(consumer_key, consumer_secret, token, token_secret, user_name, num_di
     
         try:
             user = api.get_user(screen_name=target_screen_name)
-            api.create_block(target_screen_name)
+            api.destroy_block(target_screen_name)
         
         except:
             print(u"%sは存在しないか何らかの理由でブロック解除できませんでした。" % (target_screen_name))
