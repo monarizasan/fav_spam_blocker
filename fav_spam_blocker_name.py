@@ -11,11 +11,10 @@ options.add_argument('--consumer-secret', required=True)
 options.add_argument('--token', required=True)
 options.add_argument('--token-secret', required=True)
 options.add_argument('--user-name', required=True)
-options.add_argument('--num-digits', default=2)
 options.add_argument('--unlock', action='store_true')
 
 
-def spam_block(consumer_key, consumer_secret, token, token_secret, user_name, num_digits=2):
+def spam_block(consumer_key, consumer_secret, token, token_secret, user_name):
 
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(token, token_secret)
@@ -33,7 +32,7 @@ def spam_block(consumer_key, consumer_secret, token, token_secret, user_name, nu
     print(u"%s(%s)をブロックしました。" % (user.name,user.screen_name))
         
 
-def unlock(consumer_key, consumer_secret, token, token_secret, user_name, num_digits=2):
+def unlock(consumer_key, consumer_secret, token, token_secret, user_name):
 
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(token, token_secret)
@@ -57,19 +56,17 @@ def main(opt):
                consumer_secret=opt.consumer_secret, 
                token=opt.token, 
                token_secret=opt.token_secret, 
-               user_name=opt.user_name,
-               num_digits=opt.num_digits) 
+               user_name=opt.user_name) 
         
     elif not opt.unlock:
         spam_block(consumer_key=opt.consumer_key, 
                    consumer_secret=opt.consumer_secret, 
                    token=opt.token, 
                    token_secret=opt.token_secret, 
-                   user_name=opt.user_name,
-                   num_digits=opt.num_digits) 
+                   user_name=opt.user_name) 
                    
     exit(0)
     
 
 if __name__ == '__main__':
-main(options.parse_args())
+    main(options.parse_args())
