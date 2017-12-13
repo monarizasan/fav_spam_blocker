@@ -24,14 +24,12 @@ def spam_block(consumer_key, consumer_secret, token, token_secret, user_name):
     try:
         user = api.get_user(name=user_name)
         api.create_block(user_name)
+        print(u"%s(%s)をブロックしました。" % (user.name,user.screen_name))
         
     except:
         print(u"%sは存在しないか何らかの理由でブロックできませんでした。" % (user_name))
-        continue
     
-    print(u"%s(%s)をブロックしました。" % (user.name,user.screen_name))
-        
-
+    
 def unlock(consumer_key, consumer_secret, token, token_secret, user_name):
 
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
@@ -42,12 +40,11 @@ def unlock(consumer_key, consumer_secret, token, token_secret, user_name):
     try:
         user = api.get_user(name=user_name)
         api.destroy_block(user_name)
+        print(u"%s(%s)をブロックしました。" % (user.name,user.screen_name))
         
     except:
         print(u"%sは存在しないか何らかの理由でブロックできませんでした。" % (user_name))
-        continue
-    
-    print(u"%s(%s)をブロックしました。" % (user.name,user.screen_name))
+        
     
 def main(opt):
     
