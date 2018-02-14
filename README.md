@@ -41,4 +41,14 @@ https://apps.twitter.com/
 
 を実行します。
 
+文字列検索ブロックは --search オプションをつけて
+
+`python3 fav_spam_blocker.py --consumer-key CONSUMER_KEY 
+                             --consumer-secret CONSUMER_SECRET 
+                             --token TOKEN 
+                             --token-secret TOKEN_SECRET
+                             --search 日本語検索文字列`
+                             
+を実行します。
+
 
